@@ -1,0 +1,271 @@
+{
+  "graph_version": "1.0",
+  "health_system": "UW Medicine",
+  "extracted_at": "2026-06-25",
+  "source": "Epic FHIR Brands Bundle + web validation",
+  "summary": {
+    "total_entities": 10,
+    "total_relationships": 9,
+    "by_relationship_type": {
+      "owns": 6,
+      "manages": 1,
+      "partners_with": 2
+    },
+    "by_confidence": {
+      "high": 8,
+      "medium": 1,
+      "low": 0,
+      "inferred": 0
+    },
+    "tiers": {
+      "tier_1": 4,
+      "tier_2": 5
+    },
+    "note": "Tier 1: hospitals only. Tier 2: specialty centers, clinic networks, physician groups, services. Valley Medical Center relationship winding down (ends Dec 31, 2026)."
+  },
+  "entities": [
+    {
+      "id": "uw-medicine-root",
+      "name": "UW Medicine",
+      "type": "health_system",
+      "tier": 0,
+      "brand_id": "68ff3f69-42cc-4cb7-9dad-1e9cd768e413",
+      "epic_id": "255",
+      "fhir_endpoint": "https://fhir.epic.medical.washington.edu/FHIR-Proxy/UWM/api/FHIR/R4",
+      "note": "Academic health system serving the WWAMI region (Washington, Wyoming, Alaska, Montana, Idaho)",
+      "address": {
+        "street": "1959 NE Pacific St",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98195"
+      }
+    },
+    {
+      "id": "uwmc-montlake",
+      "name": "UW Medical Center - Montlake",
+      "type": "hospital",
+      "address": {
+        "street": "1959 NE Pacific St",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98195"
+      },
+      "tier": 1,
+      "note": "Main academic teaching hospital, First Hill campus"
+    },
+    {
+      "id": "uwmc-northwest",
+      "name": "UW Medical Center - Northwest",
+      "type": "hospital",
+      "address": {
+        "street": "1550 N 115th St",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98133"
+      },
+      "tier": 1,
+      "note": "North Seattle acute-care hospital"
+    },
+    {
+      "id": "harborview",
+      "name": "Harborview Medical Center",
+      "type": "hospital",
+      "address": {
+        "street": "325 9th Ave",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98104"
+      },
+      "tier": 1,
+      "note": "Level I trauma center. Owned by King County, managed by UW Medicine."
+    },
+    {
+      "id": "fred-hutch",
+      "name": "Fred Hutchinson Cancer Center",
+      "type": "specialty_center",
+      "address": {
+        "street": "1100 Fairview Ave N",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98109"
+      },
+      "tier": 2,
+      "note": "Independent nonprofit (spun off from UW in 2021). Serves as UW Medicine's cancer program."
+    },
+    {
+      "id": "valley-medical",
+      "name": "Valley Medical Center",
+      "type": "hospital",
+      "address": {
+        "street": "400 S 43rd Street",
+        "city": "Renton",
+        "state": "WA",
+        "zip": "98055"
+      },
+      "tier": 1,
+      "note": "Owned by Public Hospital District No. 1 (separate governance). Strategic alliance with UW Medicine ending Dec 31, 2026."
+    },
+    {
+      "id": "uw-physicians",
+      "name": "UW Physicians",
+      "type": "physician_group",
+      "address": {
+        "street": "185 NE Stevens Way",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98195"
+      },
+      "tier": 2,
+      "note": "Largest physician practice plan in the Pacific Northwest region."
+    },
+    {
+      "id": "uw-neighborhood-clinics",
+      "name": "UW Medicine Primary Care",
+      "type": "clinic_network",
+      "address": {
+        "street": "Various locations",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98101"
+      },
+      "tier": 2,
+      "note": "Neighborhood-based primary care clinic network (13+ locations). Also known as UW Neighborhood Clinics."
+    },
+    {
+      "id": "airlift-northwest",
+      "name": "Airlift Northwest",
+      "type": "air_ambulance",
+      "address": {
+        "street": "325 9th Ave (Harborview)",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98104"
+      },
+      "tier": 2,
+      "note": "Nonprofit entity of UW Medicine. Aviation services operated by Air Methods since 2015."
+    },
+    {
+      "id": "scca",
+      "name": "Seattle Cancer Care Alliance",
+      "type": "specialty_center",
+      "address": {
+        "street": "825 Eastlake Ave E",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98109"
+      },
+      "tier": 2,
+      "note": "Shared ownership: UW Medicine, Fred Hutchinson Cancer Center, Seattle Children's."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "uw-medicine-root",
+      "target": "uwmc-montlake",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "uwmedicine.org",
+        "epic_brands_bundle",
+        "wikipedia"
+      ],
+      "verified_at": "2026-06-25"
+    },
+    {
+      "source": "uw-medicine-root",
+      "target": "uwmc-northwest",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "uwmedicine.org",
+        "epic_brands_bundle",
+        "wikipedia"
+      ],
+      "verified_at": "2026-06-25"
+    },
+    {
+      "source": "uw-medicine-root",
+      "target": "harborview",
+      "relationship_type": "manages",
+      "confidence": "high",
+      "sources": [
+        "uwmedicine.org",
+        "kingcounty.gov",
+        "wikipedia"
+      ],
+      "verified_at": "2026-06-25",
+      "note": "Owned by King County, operated by UW Medicine under contract. 50+ year partnership."
+    },
+    {
+      "source": "uw-medicine-root",
+      "target": "fred-hutch",
+      "relationship_type": "partners_with",
+      "confidence": "high",
+      "sources": [
+        "fredhutch.org",
+        "uwmedicine.org",
+        "wikipedia"
+      ],
+      "verified_at": "2026-06-25",
+      "note": "Independent nonprofit. Spun off from UW in 2021. Serves as UW Medicine's cancer program with close affiliation but separate governance."
+    },
+    {
+      "source": "uw-medicine-root",
+      "target": "valley-medical",
+      "relationship_type": "partners_with",
+      "confidence": "medium",
+      "sources": [
+        "seattletimes.com",
+        "beckershospitalreview.com",
+        "uwmedicine.org"
+      ],
+      "verified_at": "2026-06-25",
+      "note": "Strategic alliance with Public Hospital District No. 1 (separate governance). Alliance ending Dec 31, 2026."
+    },
+    {
+      "source": "uw-medicine-root",
+      "target": "uw-physicians",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "uwmedicine.org",
+        "newsroom.uw.edu"
+      ],
+      "verified_at": "2026-06-25"
+    },
+    {
+      "source": "uw-medicine-root",
+      "target": "uw-neighborhood-clinics",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "uwmedicine.org",
+        "epic_brands_bundle"
+      ],
+      "verified_at": "2026-06-25"
+    },
+    {
+      "source": "uw-medicine-root",
+      "target": "airlift-northwest",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "uwmedicine.org",
+        "newsroom.uw.edu",
+        "wikipedia"
+      ],
+      "verified_at": "2026-06-25"
+    },
+    {
+      "source": "uw-medicine-root",
+      "target": "scca",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "uwmedicine.org",
+        "newsroom.uw.edu"
+      ],
+      "verified_at": "2026-06-25"
+    }
+  ]
+}

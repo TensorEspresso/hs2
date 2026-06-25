@@ -1,0 +1,321 @@
+{
+  "graph_version": "1.0",
+  "health_system": "UR Medicine (University of Rochester Medical Center)",
+  "extracted_at": "2026-06-25",
+  "source": "Web research + URMC financial statements + NY State DOH registry",
+  "summary": {
+    "total_entities": 12,
+    "total_relationships": 11,
+    "by_relationship_type": {
+      "owns": 5,
+      "manages": 0,
+      "partners_with": 6
+    },
+    "by_confidence": {
+      "high": 7,
+      "medium": 4,
+      "low": 0,
+      "inferred": 0
+    },
+    "tiers": {
+      "tier_1": 8,
+      "tier_2": 2
+    },
+    "note": "Tier 1: hospitals (3 owned + 5 affiliate). Tier 2: specialty centers on Strong Memorial campus. Affiliate hospitals retain separate governance/EIN but receive operational oversight from UR Medicine."
+  },
+  "entities": [
+    {
+      "id": "ur-medicine-root",
+      "name": "UR Medicine (University of Rochester Medical Center)",
+      "type": "health_system",
+      "tier": 0,
+      "address": {
+        "street": "601 Elmwood Avenue",
+        "city": "Rochester",
+        "state": "NY",
+        "zip": "14642"
+      },
+      "note": "Academic health system and clinical enterprise of the University of Rochester. Network spans Finger Lakes and Southern Tier regions."
+    },
+    {
+      "id": "strong-memorial",
+      "name": "Strong Memorial Hospital",
+      "type": "hospital",
+      "tier": 1,
+      "address": {
+        "street": "601 Elmwood Avenue",
+        "city": "Rochester",
+        "state": "NY",
+        "zip": "14642"
+      },
+      "note": "886-bed flagship teaching hospital. Level I trauma center."
+    },
+    {
+      "id": "highland",
+      "name": "Highland Hospital",
+      "type": "hospital",
+      "tier": 1,
+      "address": {
+        "street": "1000 South Avenue",
+        "city": "Rochester",
+        "state": "NY",
+        "zip": "14620"
+      },
+      "note": "Community hospital on South Hill."
+    },
+    {
+      "id": "golisano-childrens",
+      "name": "Golisano Children's Hospital",
+      "type": "hospital",
+      "tier": 1,
+      "address": {
+        "street": "150 Crittenden Boulevard",
+        "city": "Rochester",
+        "state": "NY",
+        "zip": "14642"
+      },
+      "note": "Children's hospital on Strong Memorial campus."
+    },
+    {
+      "id": "ff-thompson",
+      "name": "F.F. Thompson Hospital",
+      "type": "hospital",
+      "tier": 1,
+      "address": {
+        "street": "350 Parrish Street",
+        "city": "Canandaigua",
+        "state": "NY",
+        "zip": "14424"
+      },
+      "note": "Affiliate hospital. Operator: The Frederick Ferris Thompson Hospital. Hub for Ontario County network."
+    },
+    {
+      "id": "noyes-memorial",
+      "name": "Noyes Memorial Hospital",
+      "type": "hospital",
+      "tier": 1,
+      "address": {
+        "street": "111 Clara Barton Street",
+        "city": "Dansville",
+        "state": "NY",
+        "zip": "14437"
+      },
+      "note": "Affiliate hospital since Jan 2015. Livingston County community hospital."
+    },
+    {
+      "id": "jones-memorial",
+      "name": "Jones Memorial Hospital",
+      "type": "hospital",
+      "tier": 1,
+      "address": {
+        "street": "191 North Main Street",
+        "city": "Wellsville",
+        "state": "NY",
+        "zip": "14895"
+      },
+      "note": "Affiliate hospital since Jan 2015. Allegany County community hospital."
+    },
+    {
+      "id": "st-james",
+      "name": "St. James Hospital",
+      "type": "hospital",
+      "tier": 1,
+      "address": {
+        "street": "7329 Seneca Road North",
+        "city": "Hornell",
+        "state": "NY",
+        "zip": "14843"
+      },
+      "note": "Affiliate hospital since 2018. Steuben County community hospital. Relocated from 411 Canisteo St in 2020."
+    },
+    {
+      "id": "geneva-general",
+      "name": "Geneva General Hospital",
+      "type": "hospital",
+      "tier": 1,
+      "address": {
+        "street": "196 North Street",
+        "city": "Geneva",
+        "state": "NY",
+        "zip": "14456"
+      },
+      "note": "Affiliate hospital since Aug 2023 via Finger Lakes Health affiliation. 105-bed acute care."
+    },
+    {
+      "id": "soldiers-sailors",
+      "name": "Soldiers & Sailors Memorial Hospital",
+      "type": "hospital",
+      "tier": 1,
+      "address": {
+        "street": "418 North Main Street",
+        "city": "Penn Yan",
+        "state": "NY",
+        "zip": "14527"
+      },
+      "note": "Affiliate hospital since Aug 2023 via Finger Lakes Health affiliation. Yates County community hospital."
+    },
+    {
+      "id": "wilmot-cancer",
+      "name": "James P. Wilmot Cancer Center",
+      "type": "specialty_center",
+      "tier": 2,
+      "address": {
+        "street": "601 Elmwood Avenue",
+        "city": "Rochester",
+        "state": "NY",
+        "zip": "14642"
+      },
+      "note": "NCI-designated Comprehensive Cancer Center. 84-bed cancer center on Strong Memorial campus. Part of Wilmot Cancer Institute."
+    },
+    {
+      "id": "eastman-institute",
+      "name": "Eastman Institute for Oral Health",
+      "type": "specialty_center",
+      "tier": 2,
+      "address": {
+        "street": "625 Elmwood Avenue",
+        "city": "Rochester",
+        "state": "NY",
+        "zip": "14620"
+      },
+      "note": "Division within URMC. Established 2009, replacing Eastman Dental Center. Integrated oral health care and education."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "ur-medicine-root",
+      "target": "strong-memorial",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "urmc.rochester.edu",
+        "university_of_rochester_financial_statements",
+        "ny_state_doh_registry"
+      ],
+      "verified_at": "2026-06-25"
+    },
+    {
+      "source": "ur-medicine-root",
+      "target": "highland",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "urmc.rochester.edu",
+        "university_of_rochester_financial_statements",
+        "ny_state_doh_registry"
+      ],
+      "verified_at": "2026-06-25"
+    },
+    {
+      "source": "ur-medicine-root",
+      "target": "golisano-childrens",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "urmc.rochester.edu",
+        "university_of_rochester_financial_statements"
+      ],
+      "verified_at": "2026-06-25"
+    },
+    {
+      "source": "ur-medicine-root",
+      "target": "ff-thompson",
+      "relationship_type": "partners_with",
+      "confidence": "medium",
+      "sources": [
+        "urmc.rochester.edu",
+        "university_of_rochester_financial_statements",
+        "thompsonhealth.com"
+      ],
+      "verified_at": "2026-06-25",
+      "note": "Affiliate hospital. Separate operator (The Frederick Ferris Thompson Hospital). UR Medicine provides operational oversight and clinical integration."
+    },
+    {
+      "source": "ur-medicine-root",
+      "target": "noyes-memorial",
+      "relationship_type": "partners_with",
+      "confidence": "medium",
+      "sources": [
+        "urmc.rochester.edu",
+        "university_of_rochester_financial_statements",
+        "democratandchronicle.com"
+      ],
+      "verified_at": "2026-06-25",
+      "note": "Affiliate hospital since Jan 2015. Separate governance. UR Medicine provides operational support."
+    },
+    {
+      "source": "ur-medicine-root",
+      "target": "jones-memorial",
+      "relationship_type": "partners_with",
+      "confidence": "medium",
+      "sources": [
+        "urmc.rochester.edu",
+        "university_of_rochester_financial_statements",
+        "democratandchronicle.com"
+      ],
+      "verified_at": "2026-06-25",
+      "note": "Affiliate hospital since Jan 2015. Separate governance. UR Medicine provides operational support."
+    },
+    {
+      "source": "ur-medicine-root",
+      "target": "st-james",
+      "relationship_type": "partners_with",
+      "confidence": "medium",
+      "sources": [
+        "urmc.rochester.edu",
+        "university_of_rochester_financial_statements",
+        "rochesterfirst.com"
+      ],
+      "verified_at": "2026-06-25",
+      "note": "Affiliate hospital since 2018. Separate 501(c)(3) entity. Affiliation agreement finalized with St. James Mercy Hospital board."
+    },
+    {
+      "source": "ur-medicine-root",
+      "target": "geneva-general",
+      "relationship_type": "partners_with",
+      "confidence": "medium",
+      "sources": [
+        "urmc.rochester.edu",
+        "flhealth.org",
+        "rochesterbeacon.com"
+      ],
+      "verified_at": "2026-06-25",
+      "note": "Affiliate hospital since Aug 2023 via Finger Lakes Health affiliation agreement."
+    },
+    {
+      "source": "ur-medicine-root",
+      "target": "soldiers-sailors",
+      "relationship_type": "partners_with",
+      "confidence": "medium",
+      "sources": [
+        "urmc.rochester.edu",
+        "flhealth.org",
+        "rochesterbeacon.com"
+      ],
+      "verified_at": "2026-06-25",
+      "note": "Affiliate hospital since Aug 2023 via Finger Lakes Health affiliation agreement."
+    },
+    {
+      "source": "ur-medicine-root",
+      "target": "wilmot-cancer",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "urmc.rochester.edu",
+        "nci.nih.gov"
+      ],
+      "verified_at": "2026-06-25"
+    },
+    {
+      "source": "ur-medicine-root",
+      "target": "eastman-institute",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "urmc.rochester.edu",
+        "university_of_rochester_financial_statements"
+      ],
+      "verified_at": "2026-06-25"
+    }
+  ]
+}
