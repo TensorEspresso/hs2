@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Visualize UR Medicine HGTM hierarchy with improved layout for wide tiers."""
+"""Visualize UW Medicine HGTM hierarchy."""
 import json
 import networkx as nx
 import matplotlib
@@ -36,9 +36,8 @@ def main():
     y_spacing = 3
     for tier_num, nodes in sorted(tiers.items()):
         n = len(nodes)
-        # Adaptive x-spacing: wider for larger tiers, extra wide for tier 2
         if tier_num == 2:
-            x_spacing = 8  # Extra spacing for tier 2 to avoid overlap
+            x_spacing = 8
         else:
             x_spacing = max(3, n * 0.8)
         total_width = (n - 1) * x_spacing
@@ -66,16 +65,24 @@ def main():
         name = G.nodes[n]['name']
         tier = G.nodes[n]['tier']
         if tier == 0:
-            short_labels[n] = "\u2605 UR Medicine"
+            short_labels[n] = "\u2605 UW Medicine"
         elif tier == 1:
-            # Short hospital names
-            short = name.replace(' Hospital', '').replace(' Memorial', '')
+            short = name.replace(' Medical Center', '').replace(' Memorial', '')
             if len(short) > 22:
                 short = short[:20] + '...'
             short_labels[n] = short
         else:
-            short = name.replace(' Institute for Oral Health', ' Dental')
-            short = short.replace('James P. Wilmot Cancer Center', 'Wilmot Cancer Center')
+            short = name
+            if 'Physicians' in short:
+                short = 'UW Physicians'
+            elif 'Primary Care' in short:
+                short = 'UW Primary Care'
+            elif 'Airlift' in short:
+                short = 'Airlift Northwest'
+            elif 'Cancer Care Alliance' in short:
+                short = 'Seattle Cancer Care'
+            elif 'Fred Hutchinson' in short:
+                short = 'Fred Hutch Cancer'
             short_labels[n] = short
 
     nx.draw_networkx_labels(G, pos, short_labels, font_size=10,
@@ -126,7 +133,7 @@ def main():
         elif t == 3:
             tier_labels[3] = 'Satellite Locations / Provider Practices'
     tier_label = ' | '.join(f"Tier {k}: {v}" for k, v in sorted(tier_labels.items()))
-    ax.set_title(f'UR Medicine (University of Rochester Medical Center) — HGTM Hierarchy\n{tier_label}',
+    ax.set_title(f'UW Medicine — HGTM Hierarchy\n{tier_label}',
                  fontsize=15, fontweight='bold', color='white', pad=20)
 
     ax.set_axis_off()

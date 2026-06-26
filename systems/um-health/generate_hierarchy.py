@@ -47,8 +47,22 @@ ax.set_ylim(-1, 12)
 ax.axis('off')
 
 # Title
+# Dynamic tier descriptions from actual data
+tier_labels = {}
+for e in data['entities']:
+    t = e.get('tier')
+    if t == 0:
+        tier_labels[0] = 'Health System'
+    elif t == 1:
+        tier_labels[1] = 'Hospitals / Medical Centers'
+    elif t == 2:
+        tier_labels[2] = 'Clinics / Specialty Centers / Ambulatory Care'
+    elif t == 3:
+        tier_labels[3] = 'Satellite Locations / Provider Practices'
+
 title = 'University of Michigan Health — HGTM Hierarchy'
-subtitle = 'Tier 1: Hospitals | Tier 2: Specialty Centers'
+subtitle_parts = [f'Tier {k}: {v}' for k, v in sorted(tier_labels.items())]
+subtitle = ' | '.join(subtitle_parts)
 ax.text(8, 11.2, title, ha='center', va='top', fontsize=20, fontweight='bold', color=TITLE_COLOR, family='sans-serif')
 ax.text(8, 10.6, subtitle, ha='center', va='top', fontsize=13, color='#8b949e', family='sans-serif')
 
