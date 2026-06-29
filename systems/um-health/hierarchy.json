@@ -1,26 +1,24 @@
 {
-  "graph_version": "1.0",
+  "graph_version": "2.0",
   "health_system": "University of Michigan Health",
-  "extracted_at": "2026-06-25",
-  "source": "Epic FHIR Brands Bundle + web validation",
+  "extracted_at": "2026-06-27",
+  "source": "Epic FHIR Brands Bundle + uofmhealth.org + CMS + Wikipedia validation",
   "summary": {
-    "total_entities": 9,
-    "total_relationships": 8,
+    "total_entities": 10,
+    "total_relationships": 9,
     "by_relationship_type": {
       "owns": 8,
-      "manages": 0,
-      "partners_with": 0
+      "manages": 1
     },
     "by_confidence": {
       "high": 8,
-      "medium": 0,
-      "low": 0
+      "medium": 1
     },
     "tiers": {
-      "tier_1": 4,
+      "tier_1": 5,
       "tier_2": 4
     },
-    "note": "Tier 1: hospitals only. Tier 2: specialty centers."
+    "note": "Tier 1: hospitals. Tier 2: specialty centers within University Hospital."
   },
   "entities": [
     {
@@ -31,7 +29,7 @@
       "brand_id": "bedc2ee6-474e-4283-880f-62ce4d1e29c7",
       "epic_id": "791",
       "fhir_endpoint": "https://mcproxyprd.med.umich.edu/FHIR-PRD/UMICH/api/FHIR/R4",
-      "note": "Academic health system serving Southeast Michigan.",
+      "note": "Academic health system serving Southeast Michigan and statewide.",
       "address": {
         "street": "1500 East Medical Center Drive",
         "city": "Ann Arbor",
@@ -40,111 +38,136 @@
       }
     },
     {
+      "id": "university-hospital",
+      "name": "University Hospital",
+      "type": "hospital",
+      "tier": 1,
+      "address": {
+        "street": "1500 East Medical Center Drive",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "zip": "48109"
+      },
+      "note": "Main adult hospital. 550 beds. Opened 1986. Houses Frankel CVC, Rogel Cancer Center, and Transplant Center."
+    },
+    {
       "id": "cs-mott",
       "name": "C.S. Mott Children's Hospital",
       "type": "hospital",
+      "tier": 1,
       "address": {
         "street": "1540 E Hospital Drive",
         "city": "Ann Arbor",
         "state": "MI",
         "zip": "48109"
       },
-      "tier": 1,
       "note": "Children's hospital on Main Campus."
-    },
-    {
-      "id": "frankel-cvc",
-      "name": "Frankel Cardiovascular Center",
-      "type": "specialty_center",
-      "address": {
-        "street": "1500 E Medical Center Dr / 1425 E Ann St",
-        "city": "Ann Arbor",
-        "state": "MI",
-        "zip": "48109"
-      },
-      "note": "Multi-building",
-      "tier": 2
-    },
-    {
-      "id": "kellogg-eye",
-      "name": "Kellogg Eye Center",
-      "type": "specialty_center",
-      "address": {
-        "street": "1000 Wall Street",
-        "city": "Ann Arbor",
-        "state": "MI",
-        "zip": "48105"
-      },
-      "note": "Ophthalmology specialty center.",
-      "tier": 2
-    },
-    {
-      "id": "rogel-cancer",
-      "name": "Rogel Cancer Center",
-      "type": "specialty_center",
-      "address": {
-        "street": "1500 E Medical Center Drive",
-        "city": "Ann Arbor",
-        "state": "MI",
-        "zip": "48109"
-      },
-      "note": "NCI-designated Comprehensive Cancer Center.",
-      "tier": 2
-    },
-    {
-      "id": "transplant-center",
-      "name": "Transplant Center",
-      "type": "specialty_center",
-      "address": {
-        "street": "1500 E Medical Center Dr",
-        "city": "Ann Arbor",
-        "state": "MI",
-        "zip": "48109"
-      },
-      "note": "Multi-organ transplant program.",
-      "tier": 2
     },
     {
       "id": "von-voigtlander",
       "name": "Von Voigtlander Women's Hospital",
       "type": "hospital",
+      "tier": 1,
       "address": {
         "street": "1540 E Hospital Drive, Floor 9",
         "city": "Ann Arbor",
         "state": "MI",
         "zip": "48109"
       },
-      "tier": 1,
-      "note": "Women's hospital on Main Campus."
+      "note": "Women's hospital on Main Campus. Floor 9 of Mott building."
     },
     {
       "id": "um-sparrow",
       "name": "UM Health-Sparrow",
       "type": "hospital_network",
+      "tier": 1,
       "address": {
         "street": "1215 E Michigan Avenue",
         "city": "Lansing",
         "state": "MI",
         "zip": "48912"
       },
-      "tier": 1,
-      "note": "Acquired 2023. 12-hospital network in Central Michigan."
+      "note": "Acquired April 2023, renamed UM Health-Sparrow April 2024. Community-owned health system. 6 hospitals, 150+ care sites across Mid-Michigan. Level I Trauma Center in Lansing."
     },
     {
       "id": "um-west",
       "name": "UM Health-West (Metro Health Hospital)",
-      "type": "hospital_network",
+      "type": "hospital",
+      "tier": 1,
       "address": {
         "street": "5900 Byron Center Ave SW",
         "city": "Wyoming",
         "state": "MI",
         "zip": "49519"
       },
-      "tier": 1,
-      "note": "Acquired 2016. 208-bed hospital in Wyoming, MI."
+      "note": "208-bed hospital. Affiliated December 2016, rebranded September 2021. 30 locations in West Michigan. Formerly Metro Health."
+    },
+    {
+      "id": "frankel-cvc",
+      "name": "Frankel Cardiovascular Center",
+      "type": "specialty_center",
+      "tier": 2,
+      "address": {
+        "street": "1425 E Ann Street",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "zip": "48109"
+      },
+      "note": "350,000 sq ft cardiovascular center. Housed within University Hospital complex."
+    },
+    {
+      "id": "kellogg-eye",
+      "name": "W.K. Kellogg Eye Center",
+      "type": "specialty_center",
+      "tier": 2,
+      "address": {
+        "street": "1000 Wall Street",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "zip": "48105"
+      },
+      "note": "Ophthalmology specialty center. Separate building."
+    },
+    {
+      "id": "rogel-cancer",
+      "name": "Rogel Cancer Center",
+      "type": "specialty_center",
+      "tier": 2,
+      "address": {
+        "street": "1500 East Medical Center Drive",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "zip": "48109"
+      },
+      "note": "NCI-designated Comprehensive Cancer Center. Nine-story building within University Hospital complex."
+    },
+    {
+      "id": "transplant-center",
+      "name": "Transplant Center",
+      "type": "specialty_center",
+      "tier": 2,
+      "address": {
+        "street": "1500 East Medical Center Drive",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "zip": "48109"
+      },
+      "note": "Transplantation and Cellular Therapy Program. Largest solid organ transplant center in Michigan. 14,000+ procedures."
     }
   ],
   "relationships": [
+    {
+      "source": "um-health-root",
+      "target": "university-hospital",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "uofmhealth.org",
+        "cms.gov",
+        "epic_brands_bundle"
+      ],
+      "verified_at": "2026-06-27"
+    },
     {
       "source": "um-health-root",
       "target": "cs-mott",
@@ -154,51 +177,7 @@
         "uofmhealth.org",
         "epic_brands_bundle"
       ],
-      "verified_at": "2026-06-25"
-    },
-    {
-      "source": "um-health-root",
-      "target": "frankel-cvc",
-      "relationship_type": "owns",
-      "confidence": "high",
-      "sources": [
-        "uofmhealth.org",
-        "epic_brands_bundle"
-      ],
-      "verified_at": "2026-06-25"
-    },
-    {
-      "source": "um-health-root",
-      "target": "kellogg-eye",
-      "relationship_type": "owns",
-      "confidence": "high",
-      "sources": [
-        "uofmhealth.org",
-        "epic_brands_bundle"
-      ],
-      "verified_at": "2026-06-25"
-    },
-    {
-      "source": "um-health-root",
-      "target": "rogel-cancer",
-      "relationship_type": "owns",
-      "confidence": "high",
-      "sources": [
-        "uofmhealth.org",
-        "epic_brands_bundle"
-      ],
-      "verified_at": "2026-06-25"
-    },
-    {
-      "source": "um-health-root",
-      "target": "transplant-center",
-      "relationship_type": "owns",
-      "confidence": "high",
-      "sources": [
-        "uofmhealth.org",
-        "epic_brands_bundle"
-      ],
-      "verified_at": "2026-06-25"
+      "verified_at": "2026-06-27"
     },
     {
       "source": "um-health-root",
@@ -209,7 +188,7 @@
         "uofmhealth.org",
         "epic_brands_bundle"
       ],
-      "verified_at": "2026-06-25"
+      "verified_at": "2026-06-27"
     },
     {
       "source": "um-health-root",
@@ -217,21 +196,68 @@
       "relationship_type": "owns",
       "confidence": "high",
       "sources": [
-        "uofmhealth.org",
+        "uofmhealthsparrow.org",
+        "michiganmedicine.org",
+        "nejm.org",
         "wikipedia"
       ],
-      "verified_at": "2026-06-25"
+      "verified_at": "2026-06-27",
+      "note": "Acquired April 2023, renamed UM Health-Sparrow April 2024. Full merger/acquisition per NEJM Catalyst. Sparrow remains community-owned but is owned by UM Health."
     },
     {
       "source": "um-health-root",
       "target": "um-west",
+      "relationship_type": "manages",
+      "confidence": "medium",
+      "sources": [
+        "uofmhealthwest.org",
+        "wikipedia"
+      ],
+      "verified_at": "2026-06-27",
+      "note": "Affiliated December 2016, rebranded September 2021. Affiliated relationship — UM Health does not own Metro Health. Public sources use 'affiliated with' language."
+    },
+    {
+      "source": "university-hospital",
+      "target": "frankel-cvc",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "uofmhealth.org",
+        "umcvc.org"
+      ],
+      "verified_at": "2026-06-27"
+    },
+    {
+      "source": "university-hospital",
+      "target": "kellogg-eye",
       "relationship_type": "owns",
       "confidence": "high",
       "sources": [
         "uofmhealth.org",
         "wikipedia"
       ],
-      "verified_at": "2026-06-25"
+      "verified_at": "2026-06-27"
+    },
+    {
+      "source": "university-hospital",
+      "target": "rogel-cancer",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "uofmhealth.org",
+        "cancercenters.cancer.gov"
+      ],
+      "verified_at": "2026-06-27"
+    },
+    {
+      "source": "university-hospital",
+      "target": "transplant-center",
+      "relationship_type": "owns",
+      "confidence": "high",
+      "sources": [
+        "uofmhealth.org"
+      ],
+      "verified_at": "2026-06-27"
     }
   ]
 }

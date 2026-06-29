@@ -42,7 +42,7 @@ Loose affiliations (no contract, no equity) are **not** included.
 {
   "id": "unique-id",
   "name": "Facility Name",
-  "type": "hospital|specialty_center|clinic|health_system|...",
+  "type": "hospital|specialty_center|clinic|health_system|physician_group|clinic_network|air_ambulance|...",
   "tier": 0|1|2|3,
   "address": {
     "street": "...",
@@ -50,7 +50,9 @@ Loose affiliations (no contract, no equity) are **not** included.
     "state": "...",
     "zip": "..."
   },
-  "identifiers": ["NPI", "EIN", ...],
+  "brand_id": "Epic FHIR brand UUID (optional)",
+  "epic_id": "Epic system ID (optional)",
+  "fhir_endpoint": "Epic FHIR proxy URL (optional)",
   "note": "Optional context"
 }
 ```

@@ -35,10 +35,10 @@ This is the clearest evidence — a major academic medical center uses exactly t
 
 ### Cleveland Clinic
 
-> *"173-acre main campus near downtown Cleveland, 23 hospitals, 276 outpatient facilities"*
+> *"23 hospitals, 276 outpatient facilities"*
 > *"18 Family Health and Service Centers across the region"*
 
-**Source:** IHF membership profile; Wikipedia (History of Cleveland Clinic)
+**Source:** Cleveland Clinic official website (about.clevelandclinic.org / clevelandclinic.org/locations)
 
 Cleveland Clinic structures facilities as:
 1. Main campus + hospitals (23)
@@ -47,7 +47,7 @@ Cleveland Clinic structures facilities as:
 
 ### Kaiser Permanente
 
-> *"40 hospitals and 609 medical facilities"* (also cited as "616 medical office buildings")
+> *"40 hospitals and 609 medical facilities"*
 
 **Source:** Kaiser Permanente Fast Facts; Wikipedia
 
@@ -55,6 +55,8 @@ Kaiser's structure:
 1. Hospitals (40)
 2. Medical facilities — larger outpatient/ambulatory centers
 3. Medical office buildings — physician practices, clinics
+
+*Note: Some citations report "616 medical office buildings" — the discrepancy reflects different counting methodologies (facilities vs. buildings). The 3-level structure remains consistent regardless of the count.*
 
 ### Mayo Clinic Health System
 
@@ -88,6 +90,8 @@ Providence explicitly separates:
 1. Hospitals (51)
 2. Clinics (1,100+)
 
+*Note: Providence's self-description uses a 2-level structure (hospitals + clinics) without an explicit intermediate tier. This represents a valid alternative model where specialty centers are embedded within hospitals rather than standing as independent branded entities. The 3-tier model still applies where specialty centers have independent brand identity (e.g., Providence Portland Medical Center's specialty programs).*
+
 ---
 
 ## Evidence: Academic and Industry Frameworks
@@ -107,6 +111,8 @@ The model consistently describes three levels:
 2. **Intermediate** = specialty centers / ambulatory care centers (focused service)
 3. **Spoke** = community clinics / satellite sites (distributed access)
 
+*Note: Academic literature often expresses hub-and-spoke as a 2-level model (hub → spoke). The intermediate tier (specialty centers) is inferred from systems that explicitly distinguish branded specialty centers from community clinics. Where specialty centers lack independent brand identity, they collapse into the spoke level.*
+
 ### MedPAC (Medicare Payment Advisory Commission)
 
 > *"...costly site (e.g., ambulatory care center versus a hospital...)"*
@@ -115,15 +121,17 @@ The model consistently describes three levels:
 
 MedPAC explicitly distinguishes ambulatory care centers from hospitals as separate facility types with different cost structures — supporting the Tier 1 vs Tier 2 distinction.
 
-### "Medicine Moves to the Mall" (University of Chicago Press)
+### "Medicine Moves to the Mall" (Johns Hopkins University Press)
 
 > *"At the hospital, ambulatory care patients mingle with inpatients... At a satellite center, where well-baby visits and treatment of minor illnesses are the most common services..."*
 
-**Source:** "Medicine Moves to the Mall" (1st ed.)
+**Source:** "Medicine Moves to the Mall" by Sloane & Sloane (Johns Hopkins University Press, 2003)
 
 Distinguishes between:
 1. Hospital-based ambulatory care (inside Tier 1)
-2. Satellite centers (standalone, limited service — Tier 3)
+2. Satellite centers (standalone, limited service)
+
+*Note: This source describes a 2-level structure (hospital vs. satellite). The Tier 2 specialty center is not explicitly addressed — it represents the case where a satellite has grown into a branded, multi-service entity with independent identity.*
 
 ### PolicyMap Compendium of U.S. Health Systems
 
@@ -159,6 +167,39 @@ SingHealth uses a hub-and-spoke model with:
 3. Polyclinics / community health centers (spoke)
 
 **Source:** Straits Times; SingHealth website
+
+*Note: International evidence is limited. SingHealth provides one data point supporting the 3-level structure, but cross-cultural healthcare system comparisons require caution. The model is primarily validated against US health systems.*
+
+---
+
+## Counter-Evidence: Systems That Don't Fit
+
+Not all health systems follow the 3-tier model. Several represent valid alternatives:
+
+### Flat Structures (2 Levels)
+
+Some systems describe themselves with only two levels below the root:
+
+- **Some community health systems:** Hospital + clinics, no independent specialty centers
+- **Providence Health & Services:** "51 hospitals and over 1,100 clinics" — specialty programs embedded within hospitals rather than standing as independent entities
+- **Some rural health networks:** Hospital + satellite clinics, no intermediate tier
+
+### Hybrid Structures
+
+Other systems use the 3-tier model but with different naming or grouping:
+
+- **Mayo Clinic:** "16 hospitals, 53 multispecialty clinics" — the "multispecialty clinic" label could map to either Tier 2 (if branded/independent) or Tier 3 (if service-named)
+- **Beaumont/Corewell:** "8 hospitals, 187 ambulatory/outpatient sites" — the 187 sites are further subdivided by service type, suggesting an internal hierarchy within Tier 2/3
+
+### Implications
+
+The 3-tier model is **descriptive, not prescriptive**. It captures what major academic medical centers and large integrated systems actually look like, but:
+
+1. **Specialty centers without independent brand identity** collapse into the clinic tier
+2. **Systems without significant specialty programs** may only need 2 tiers
+3. **The model is most useful for academic health systems** and large integrated networks
+
+The Tier 2 vs Tier 3 distinction (independent brand identity + service array) remains the key decision rule for classification.
 
 ---
 
